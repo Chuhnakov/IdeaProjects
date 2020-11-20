@@ -22,7 +22,6 @@ public void setUp(){
     //Demo demo = new Demo();
     //demo.testsayHello();
    // Assert.assertEquals("hello",outputStream.toString());
-    Solution solution = new Solution();
     /*
     String inPut = JOptionPane.showInputDialog(
             null,
@@ -31,6 +30,8 @@ public void setUp(){
             JOptionPane.QUESTION_MESSAGE
     );
      */
+    Solution solution = new Solution();
+    // Ex 1
     boolean result= solution.isStrobogrammatic("69");
     Assert.assertEquals(result,true);
 
@@ -38,17 +39,13 @@ public void setUp(){
     Assert.assertEquals(result,true);
 
     result= solution.isStrobogrammatic("962");
-    Assert.assertEquals(result,true);
+    Assert.assertEquals(result,false);
 
     result= solution.isStrobogrammatic("1");
     Assert.assertEquals(result,true);
-    /*
-    inPut = JOptionPane.showInputDialog(
-            null,
-            "Введите число",
-            "Степень четвёрки",
-            JOptionPane.QUESTION_MESSAGE
-    );
+
+    // Ex 2
+    //--------------------------------------------------------------
 
      result = solution.isPowerOfFour(16);
     Assert.assertEquals(result,true);
@@ -64,7 +61,7 @@ public void setUp(){
 
     result = solution.isPowerOfFour(1020);
     Assert.assertEquals(result,false);
-*/
+
 }
 @After
 public void cleanUp(){

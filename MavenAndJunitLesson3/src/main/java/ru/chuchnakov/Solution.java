@@ -5,6 +5,7 @@ import jdk.nashorn.internal.runtime.Debug;
 public class Solution {
     public static void main(String[] args) {
     boolean a = isStrobogrammatic("69");
+    boolean b = isPowerOfFour(16);
     }
     public static boolean isStrobogrammatic(String num ) {
         String revNum = "";//TODO убрать пробелы
@@ -23,11 +24,11 @@ public class Solution {
                    break;
            }
        }
-        return  num == revNum;
+        return  num.equals(revNum);
     }
-    public boolean isPowerOfFour(int n){
-        if((int)Math.pow(-2,31) <= n ||
-                n <= (int)Math.pow(2,31)-1)
+    public static boolean isPowerOfFour(int n){
+        if((int)Math.pow(-2,31) >= n ||
+                n >= (int)Math.pow(2,31)-1)
             return false;//TODO Сообщение об исключении
         if (n == 1)
             return  true;

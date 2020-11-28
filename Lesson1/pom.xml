@@ -4,11 +4,17 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+	<developers>
+		<developer>
+			<id> Chuhnakov </id>
+			<name> Andrey Chuhnakov </name>
+			<email> Chuhnakov71@gmail.com </email>
+		</developer>
+	</developers>
+
     <groupId>org.example</groupId>
     <artifactId>MavenAndJunitLesson3</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-
 
     <dependencies>
         <dependency>

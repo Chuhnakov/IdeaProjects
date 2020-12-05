@@ -9,6 +9,9 @@ public class Main {
         for(int i = 0; i < temp.length; ++i) {
             System.out.print(temp[i] + " ");
         }
+        System.out.println("");
+        System.out.println("___________Patches________________");
 
+        System.out.print(s.minPatches(temp,20));
     }
 }

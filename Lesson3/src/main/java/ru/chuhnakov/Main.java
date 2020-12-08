@@ -6,12 +6,12 @@ public class Main {
         Solution s = new Solution();
         int[] temp = s.beautifulArray(5);
 
-        for(int i = 0; i < temp.length; ++i) {
-            System.out.print(temp[i] + " ");
+        for (int j : temp) {
+            System.out.print(j + " ");
         }
         System.out.println("");
         System.out.println("___________Patches________________");
 
-        System.out.print(s.minPatches(temp,20));
+        System.out.print(s.minPatches(temp, 20));
     }
 }

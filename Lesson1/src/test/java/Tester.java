@@ -1,29 +1,16 @@
-import org.junit.After;
 import org.junit.Assert;
-import org.junit.Before;
-import ru.chuchnakov.Demo;
 import org.junit.Test;
 import ru.chuchnakov.Solution;
-
-import javax.swing.*;
-import javax.swing.JOptionPane.*;
 import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
 
 public class Tester {
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
-
-    @Before
-    public void setUp() {
-        System.setOut(new PrintStream(outputStream));
-    }
-
+   private Solution solution = new Solution();
+   private boolean result;
     @Test
-    public void setSayHello() {
+    public void testStrobogrammatic() {
 
-        Solution solution = new Solution();
-        // Ex 1
-        boolean result = solution.isStrobogrammatic("69");
+        result = solution.isStrobogrammatic("69");
         Assert.assertTrue(result);
 
         result = solution.isStrobogrammatic("88");
@@ -34,9 +21,8 @@ public class Tester {
 
         result = solution.isStrobogrammatic("1");
         Assert.assertTrue(result);
-
-        // Ex 2
-        //--------------------------------------------------------------
+    }
+    public void testPowerOfFour() {
 
         result = solution.isPowerOfFour(16);
         Assert.assertTrue(result);
@@ -52,11 +38,5 @@ public class Tester {
 
         result = solution.isPowerOfFour(1020);
         Assert.assertFalse(result);
-
-    }
-
-    @After
-    public void cleanUp() {
-        System.setOut(null);
     }
 }
